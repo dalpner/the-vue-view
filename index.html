@@ -3,43 +3,7 @@
 
 <head>
     <title>Vue View</title>
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-
-        body {
-            margin: 0;
-            background-color: grey;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        #nav-bar-div {
-            background-color: black;
-            height: 5vh;
-        }
-
-        #nav-bar-text-div {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-
-        .nav-bar-text {
-            color: red;
-            font-family: monaco, monospace;
-            font-size: 250%;
-            text-decoration: underline;
-            position: relative;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -83,15 +47,30 @@
                 <div class="nav-bar-text">
                     Contact
                 </div>
+                <div>
+
+                </div>
             </div>
             <div></div>
         </div>
+        <contact-page />
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         let app = Vue.createApp({
             data: function () {
                 return {
+                }
+            }
+        })
+
+        app.component('contact-page', {
+            template: `
+
+            `,
+            data() {
+                return {
+
                 }
             }
         })
